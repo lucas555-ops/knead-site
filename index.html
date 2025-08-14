@@ -17,24 +17,11 @@
       theme: {
         extend: {
           colors: {
-            loaf: {
-              yellow: '#F5B041',
-              crust: '#A05A2C',
-              butter: '#FFE082',
-              neon: '#39FF14',
-            },
-            sol: {
-              top: '#00FFA3',
-              mid: '#03E1FF',
-              bot: '#DC1FFF',
-            }
+            loaf: { yellow:'#F5B041', crust:'#A05A2C', butter:'#FFE082', neon:'#39FF14' },
+            sol: { top:'#00FFA3', mid:'#03E1FF', bot:'#DC1FFF' }
           },
-          boxShadow: {
-            loaf: '0 10px 40px rgba(57,255,20,0.25)',
-          },
-          fontFamily: {
-            display: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Inter','sans-serif']
-          }
+          boxShadow: { loaf:'0 10px 40px rgba(57,255,20,0.25)' },
+          fontFamily: { display:['ui-sans-serif','system-ui','-apple-system','Segoe UI','Inter','sans-serif'] }
         }
       }
     }
@@ -43,7 +30,11 @@
   <script src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
   <style>
     /* grain overlay for a gritty degen vibe */
-    .grain:before { content:''; position:fixed; inset:0; background:url('data:image/svg+xml;utf8,<svg xmlns=\"http://www.w3.org/2000/svg\" width=\"128\" height=\"128\"><filter id=\"n\"><feTurbulence type=\"fractalNoise\" baseFrequency=\"0.9\" numOctaves=\"2\" stitchTiles=\"stitch\"/></filter><rect width=\"100%\" height=\"100%\" filter=\"url(%23n)\" opacity=\"0.04\"/></svg>') repeat; pointer-events:none; }
+    .grain:before {
+      content:''; position:fixed; inset:0;
+      background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23n)" opacity="0.04"/></svg>') repeat;
+      pointer-events:none;
+    }
   </style>
 </head>
 <body class="grain bg-zinc-950 text-zinc-100 antialiased selection:bg-loaf.neon selection:text-zinc-900">
@@ -61,7 +52,6 @@
         <a href="#community" class="opacity-80 hover:opacity-100">Community</a>
       </nav>
       <div class="ml-3 flex items-center gap-2">
-        <!-- Replace links after launch -->
         <a href="https://twitter.com/" target="_blank" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700">X</a>
         <a href="https://t.me/" target="_blank" class="px-3 py-2 rounded-xl bg-zinc-800 hover:bg-zinc-700">TG</a>
         <a href="#buy" class="px-3 py-2 rounded-xl bg-gradient-to-r from-sol.top via-sol.mid to-sol.bot text-[#ffbb11] font-semibold">BUY</a>
@@ -76,22 +66,22 @@
         <h1 class="text-4xl md:text-6xl font-extrabold leading-tight">
           The Loaf That Will <span class="bg-gradient-to-r from-sol.top via-sol.mid to-sol.bot bg-clip-text text-transparent">Rise</span>
         </h1>
-        <p class="mt-5 text-zinc-300 max-w-prose">We don’t just want pumps — <span class="text-loaf.neon font-semibold">we KNEAD them</span>. The stoic bread cat on Solana. Calm crust. Violent core. Join the loaf army.</p>
+        <p class="mt-5 text-zinc-300 max-w-prose">
+          We don’t just want pumps — <span class="text-loaf.neon font-semibold">we KNEAD them</span>.
+          The stoic bread cat on Solana. Calm crust. Violent core. Join the loaf army.
+        </p>
         <div class="mt-8 flex flex-wrap gap-3">
-          <!-- Replace hrefs -->
-          <a id="buy" href="#" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-sol.top via-sol.mid to-sol.bot text-text-[#ffbb11] font-bold shadow-loaf">Buy on DEX</a>
+          <a id="buy" href="#" class="px-5 py-3 rounded-2xl bg-gradient-to-r from-sol.top via-sol.mid to-sol.bot text-[#ffbb11] font-bold shadow-loaf">Buy on DEX</a>
           <a href="#chart" class="px-5 py-3 rounded-2xl bg-zinc-800 hover:bg-zinc-700">Chart</a>
           <a href="#community" class="px-5 py-3 rounded-2xl bg-zinc-800 hover:bg-zinc-700">Join</a>
         </div>
         <div class="mt-6 text-xs opacity-70">Contract: <span class="font-mono">PASTE_CONTRACT_HERE</span></div>
       </div>
       <div class="relative">
-        <!-- Hero image: place your cat loaf here at assets/loaf-hero.jpg -->
         <div class="relative rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
           <img src="assets/loaf-hero.jpg" alt="$KNEAD loaf cat" class="w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-tr from-zinc-950/0 via-zinc-950/10 to-zinc-950/0"></div>
         </div>
-        <!-- Floating candles -->
         <div class="absolute -bottom-6 -left-6 flex gap-2">
           <span class="w-2 h-10 rounded-full bg-loaf.neon blur-[1px]"></span>
           <span class="w-2 h-14 rounded-full bg-loaf.neon/80 blur-[1px]"></span>
@@ -120,43 +110,49 @@
             </blockquote>
           </div>
         </div>
-       <div class="space-y-4">
- 
- <!-- Token Stats -->
-  <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-    <h3 class="font-semibold mb-2">Token Stats</h3>
-    <ul class="text-sm text-zinc-300 space-y-1">
-      <li>Chain: <b>Solana</b></li>
-      <li>Supply: <b>1,000,000,000</b></li>
-      <li>Tax: <b>0%</b></li>
-      <li>LP: <b>LOCKED</b></li>
-    </ul>
-  </div>
 
-  <!-- Links -->
-  <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-    <h3 class="font-semibold mb-2">Links</h3>
-    <div class="flex flex-wrap gap-2 text-sm">
-      <!-- X -->
-      <a href="https://twitter.com/" target="_blank" 
-         class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-        X
-      </a>
-      <!-- Dexscreener -->
-      <a href="https://dexscreener.com/solana/PASTE_CONTRACT_HERE" target="_blank" 
-         class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-        Dexscreener
-      </a>
-    </div>
-  </div>
-</div>
+        <div class="space-y-4">
+          <!-- Token Stats -->
+          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+            <h3 class="font-semibold mb-2">Token Stats</h3>
+            <ul class="text-sm text-zinc-300 space-y-1">
+              <li>Chain: <b>Solana</b></li>
+              <li>Supply: <b>1,000,000,000</b></li>
+              <li>Tax: <b>0%</b></li>
+              <li>LP: <b>LOCKED</b></li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+            <h3 class="font-semibold mb-2">Links</h3>
+            <div class="flex flex-wrap gap-2 text-sm">
+              <!-- X -->
+              <a href="https://twitter.com/" target="_blank"
+                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+                X
+              </a>
+              <!-- Dexscreener -->
+              <a href="https://dexscreener.com/solana/PASTE_CONTRACT_HERE" target="_blank"
+                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+                Dexscreener
+              </a>
+            </div>
+          </div>
+        </div>
+      </div> <!-- /grid -->
+    </div> <!-- /container -->
+  </section> <!-- /#chart -->
 
   <!-- ABOUT -->
   <section id="about" class="py-16 md:py-20">
     <div class="max-w-5xl mx-auto px-4 grid md:grid-cols-2 gap-10 items-center">
       <div>
         <h2 class="text-3xl md:text-4xl font-bold">What is $KNEAD?</h2>
-        <p class="mt-4 text-zinc-300">A stoic bread cat who refuses to blink before liftoff. We’re baking a culture: cute visuals, violent upside, and a community that rallies on command. From kitchen floor to Solana lore.</p>
+        <p class="mt-4 text-zinc-300">
+          A stoic bread cat who refuses to blink before liftoff. We’re baking a culture: cute visuals,
+          violent upside, and a community that rallies on command. From kitchen floor to Solana lore.
+        </p>
         <ul class="mt-6 space-y-3 text-zinc-200">
           <li>🥖 Meme-first, utility-later (maybe).</li>
           <li>🧪 Transparent, fair, degen-friendly launch.</li>
@@ -173,31 +169,31 @@
   </section>
 
   <!-- TOKENOMICS -->
- <section id="tokenomics" class="py-16 border-t border-white/10 bg-zinc-900/40">
-  <div class="max-w-6xl mx-auto px-4">
-    <h2 class="text-3xl md:text-4xl font-bold">Tokenomics</h2>
+  <section id="tokenomics" class="py-16 border-t border-white/10 bg-zinc-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold">Tokenomics</h2>
 
-    <div class="mt-8 grid md:grid-cols-3 gap-6">
-      <!-- Supply -->
-      <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
-        <h3 class="font-semibold mb-2">Supply</h3>
-        <p class="text-zinc-300">1,000,000,000 <span class="opacity-70">(editable)</span></p>
-      </div>
+      <div class="mt-8 grid md:grid-cols-3 gap-6">
+        <!-- Supply -->
+        <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
+          <h3 class="font-semibold mb-2">Supply</h3>
+          <p class="text-zinc-300">1,000,000,000 <span class="opacity-70">(editable)</span></p>
+        </div>
 
-      <!-- Buy & Hold / or Trade -->
-      <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
-        <h3 class="font-semibold mb-2">Buy &amp; Hold</h3>
-        <p class="text-zinc-300">or <span class="font-semibold">Trade</span></p>
-      </div>
+        <!-- Buy & Hold / or Trade -->
+        <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
+          <h3 class="font-semibold mb-2">Buy &amp; Hold</h3>
+          <p class="text-zinc-300">or <span class="font-semibold">Trade</span></p>
+        </div>
 
-      <!-- Ride the Wave / or Get Wrecked -->
-      <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
-        <h3 class="font-semibold mb-2">Ride the Wave</h3>
-        <p class="text-zinc-300">or <span class="font-semibold">Get Wrecked</span></p>
+        <!-- Ride the Wave / or Get Wrecked -->
+        <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
+          <h3 class="font-semibold mb-2">Ride the Wave</h3>
+          <p class="text-zinc-300">or <span class="font-semibold">Get Wrecked</span></p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- ROADMAP -->
   <section id="roadmap" class="py-16">
@@ -225,37 +221,38 @@
   </section>
 
   <!-- COMMUNITY -->
-<section id="community" class="py-16 border-t border-white/10 bg-zinc-900/40">
-  <div class="max-w-6xl mx-auto px-4">
-    <div class="grid md:grid-cols-2 gap-8 items-center">
-      <div>
-        <h2 class="text-3xl md:text-4xl font-bold">Join the Loaf Army</h2>
-        <p class="mt-3 text-zinc-300">
-          We knead. We rise. We pump. Drop your loaf memes, raid callouts, and alpha. 
-          Stickers, banners, and raid copy included.
-        </p>
-        <div class="mt-6 flex flex-wrap gap-3">
-          <!-- Follow on X -->
-          <a href="https://twitter.com/" target="_blank" 
-             class="group px-5 py-3 rounded-2xl bg-zinc-800 hover:bg-zinc-700 flex items-center gap-2 transition-transform duration-200 hover:scale-[1.02]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" 
-                 class="w-5 h-5 transition-transform duration-200 group-hover:rotate-6 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]">
-              <path d="M714.163 519.284 1160.9 0H1055.21L667.137 450.887 356.703 0H0l463.83 681.653L0 1226.86h105.692l408.78-486.37 328.905 486.37h356.704L714.163 519.284ZM569.805 684.246l-47.34-68.44L144.548 80.518h153.62l300.586 434.518 47.34 68.44 404.516 583.066H896.99L569.805 684.246Z"/>
-            </svg>
-            Follow on X
-          </a>
+  <section id="community" class="py-16 border-t border-white/10 bg-zinc-900/40">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold">Join the Loaf Army</h2>
+          <p class="mt-3 text-zinc-300">
+            We knead. We rise. We pump. Drop your loaf memes, raid callouts, and alpha.
+            Stickers, banners, and raid copy included.
+          </p>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <!-- Follow on X -->
+            <a href="https://twitter.com/" target="_blank"
+               class="group px-5 py-3 rounded-2xl bg-zinc-800 hover:bg-zinc-700 flex items-center gap-2 transition-transform duration-200 hover:scale-[1.02]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor"
+                   class="w-5 h-5 transition-transform duration-200 group-hover:rotate-6 group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.35)]">
+                <path d="M714.163 519.284 1160.9 0H1055.21L667.137 450.887 356.703 0H0l463.83 681.653L0 1226.86h105.692l408.78-486.37 328.905 486.37h356.704L714.163 519.284ZM569.805 684.246l-47.34-68.44L144.548 80.518h153.62l300.586 434.518 47.34 68.44 404.516 583.066H896.99L569.805 684.246Z"/>
+              </svg>
+              Follow on X
+            </a>
 
-          <!-- Community (Solana gradient) -->
-          <a href="https://x.com/i/communities/1952809421719126374" target="_blank" 
-             class="group px-5 py-3 rounded-2xl bg-gradient-to-r from-[#00ff9d] via-[#00e0ff] to-[#9d00ff] text-white font-semibold flex items-center gap-2 transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(3,225,255,0.6)]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor" 
-                 class="w-5 h-5 transition-transform duration-200 group-hover:-rotate-6 group-hover:drop-shadow-[0_0_10px_rgba(3,225,255,0.8)]">
-              <path d="M714.163 519.284 1160.9 0H1055.21L667.137 450.887 356.703 0H0l463.83 681.653L0 1226.86h105.692l408.78-486.37 328.905 486.37h356.704L714.163 519.284ZM569.805 684.246l-47.34-68.44L144.548 80.518h153.62l300.586 434.518 47.34 68.44 404.516 583.066H896.99L569.805 684.246Z"/>
-            </svg>
-            Community
-          </a>
+            <!-- Community (Solana gradient) -->
+            <a href="https://x.com/i/communities/1952809421719126374" target="_blank"
+               class="group px-5 py-3 rounded-2xl bg-gradient-to-r from-[#00ff9d] via-[#00e0ff] to-[#9d00ff] text-white font-semibold flex items-center gap-2 transition-transform duration-200 hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(3,225,255,0.6)]">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1227" fill="currentColor"
+                   class="w-5 h-5 transition-transform duration-200 group-hover:-rotate-6 group-hover:drop-shadow-[0_0_10px_rgba(3,225,255,0.8)]">
+                <path d="M714.163 519.284 1160.9 0H1055.21L667.137 450.887 356.703 0H0l463.83 681.653L0 1226.86h105.692l408.78-486.37 328.905 486.37h356.704L714.163 519.284ZM569.805 684.246l-47.34-68.44L144.548 80.518h153.62l300.586 434.518 47.34 68.44 404.516 583.066H896.99L569.805 684.246Z"/>
+              </svg>
+              Community
+            </a>
+          </div>
         </div>
-      </div>
+
         <div class="relative rounded-3xl overflow-hidden ring-1 ring-white/10">
           <img src="assets/loaf-3.jpg" alt="Loaf army" class="w-full h-full object-cover" />
           <div class="absolute inset-0 pointer-events-none bg-gradient-to-tr from-transparent via-zinc-950/10 to-transparent"></div>
@@ -275,10 +272,8 @@
   </footer>
 
   <script>
-    // tiny touches
     document.getElementById('year').textContent = new Date().getFullYear();
     gsap.to('.animate-pulse', { repeat: -1, yoyo: true, duration: 1.2, opacity: 0.3 });
-  
   </script>
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
