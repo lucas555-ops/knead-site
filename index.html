@@ -128,9 +128,11 @@
     </div>
   </section>
 
-  <section id="chart" class="py-12 md:py-16 border-t border-white/10">
+<!-- TICKER / WIDGETS -->
+<section id="chart" class="py-12 md:py-16 border-t border-white/10">
   <div class="max-w-7xl mx-auto px-4">
     <div class="grid md:grid-cols-3 gap-6">
+      <!-- Left: Tweet embed -->
       <div class="md:col-span-2">
         <div class="rounded-2xl ring-1 ring-white/10 bg-zinc-900/50 p-4">
           <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
@@ -149,45 +151,42 @@
             &mdash; Knead (@knead_ink)
             <a href="https://twitter.com/knead_ink/status/1956099755177832863?ref_src=twsrc%5Etfw">August 14, 2025</a>
           </blockquote>
-          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
         </div>
       </div>
-    </div>
-  </div>
-</section>
 
-        <div class="space-y-4">
-          <!-- Token Stats -->
-          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-            <h3 class="font-semibold mb-2">Token Stats</h3>
-            <ul class="text-sm text-zinc-300 space-y-1">
-              <li>Chain: <b>Solana</b></li>
-              <li>Supply: <b>1,000,000,000</b></li>
-              <li>Tax: <b>0%</b></li>
-              <li>LP: <b>LOCKED</b></li>
-            </ul>
-          </div>
+      <!-- Right: Stats + Links -->
+      <div class="space-y-4">
+        <!-- Token Stats -->
+        <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+          <h3 class="font-semibold mb-2">Token Stats</h3>
+          <ul class="text-sm text-zinc-300 space-y-1">
+            <li>Chain: <b>Solana</b></li>
+            <li>Supply: <b>1,000,000,000</b></li>
+            <li>Tax: <b>0%</b></li>
+            <li>LP: <b>LOCKED</b></li>
+          </ul>
+        </div>
 
-          <!-- Links -->
-          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-            <h3 class="font-semibold mb-2">Links</h3>
-            <div class="flex flex-wrap gap-2 text-sm">
-              <!-- X -->
-              <a href="https://x.com/knead_ink" target="_blank" rel="noopener"
-                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-                X
-              </a>
-              <!-- Dexscreener -->
-              <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk" target="_blank" rel="noopener"
-                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-                Dexscreener
-              </a>
-            </div>
+        <!-- Links -->
+        <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+          <h3 class="font-semibold mb-2">Links</h3>
+          <div class="flex flex-wrap gap-2 text-sm">
+            <!-- X -->
+            <a href="https://x.com/knead_ink" target="_blank" rel="noopener"
+               class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+              X
+            </a>
+            <!-- Dexscreener -->
+            <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk" target="_blank" rel="noopener"
+               class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+              Dexscreener
+            </a>
           </div>
         </div>
-      </div> <!-- /grid -->
-    </div> <!-- /container -->
-  </section> <!-- /#chart -->
+      </div>
+    </div> <!-- /grid -->
+  </div> <!-- /container -->
+</section> <!-- /#chart -->
 
   <!-- ABOUT -->
   <section id="about" class="py-16 md:py-20">
