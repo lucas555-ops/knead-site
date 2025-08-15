@@ -66,7 +66,10 @@
       background-size: 200% 100%;
       animation: gradient-x 3s linear infinite;
     }
-  </style>
+      blockquote.twitter-tweet {max-width: 100% !important; margin: 0 auto !important;}
+  .twitter-tweet-rendered {width: 100% !important;}
+  .tweet-wrap {min-height: 420px;}
+</style>
 </head>
 
 <body class="grain bg-zinc-950 text-zinc-100 antialiased selection:bg-loaf.neon selection:text-zinc-900">
@@ -150,25 +153,28 @@
     <div class="grid md:grid-cols-3 gap-6">
       <!-- Left: Tweet embed -->
       <div class="md:col-span-2">
-        <div class="rounded-2xl ring-1 ring-white/10 bg-zinc-900/50 p-4">
-          <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true">
-            <p lang="en" dir="ltr">
-              🚀 KNEAD CULT is live.<br>
-              🐾 Meme is weapon. Mask is signal.<br>
-              🔥 Solana Meme Legion - where degenerates ascend.<br>
-              💬 Join the temple →
-              <a href="https://t.co/72uxUOiT5y">https://t.co/72uxUOiT5y</a>
-              <a href="https://twitter.com/search?q=%24KNEAD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$KNEAD</a> |
-              <a href="https://twitter.com/hashtag/Solana?src=hash&amp;ref_src=twsrc%5Etfw">#Solana</a>
-              <a href="https://twitter.com/hashtag/CryptoCult?src=hash&amp;ref_src=twsrc%5Etfw">#CryptoCult</a>
-              <a href="https://twitter.com/hashtag/WAGMI?src=hash&amp;ref_src=twsrc%5Etfw">#WAGMI</a>
-              <a href="https://t.co/k4OnjkNqXg">pic.twitter.com/k4OnjkNqXg</a>
-            </p>
-            &mdash; Knead (@knead_ink)
-            <a href="https://twitter.com/knead_ink/status/1956099755177832863?ref_src=twsrc%5Etfw">August 14, 2025</a>
-          </blockquote>
-        </div>
-      </div>
+<div class="rounded-2xl ring-1 ring-white/10 bg-zinc-900/50 p-4 tweet-wrap">
+  <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
+    <p lang="en" dir="ltr">
+      🚀 KNEAD CULT is live.<br>
+      🐾 Meme is weapon. Mask is signal.<br>
+      🔥 Solana Meme Legion - where degenerates ascend.<br>
+      💬 Join the temple →
+      <a href="https://t.co/72uxUOiT5y">https://t.co/72uxUOiT5y</a>
+      <a href="https://twitter.com/search?q=%24KNEAD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$KNEAD</a> |
+      <a href="https://twitter.com/hashtag/Solana?src=hash&amp;ref_src=twsrc%5Etfw">#Solana</a>
+      <a href="https://twitter.com/hashtag/CryptoCult?src=hash&amp;ref_src=twsrc%5Etfw">#CryptoCult</a>
+      <a href="https://twitter.com/hashtag/WAGMI?src=hash&amp;ref_src=twsrc%5Etfw">#WAGMI</a>
+      <a href="https://t.co/k4OnjkNqXg">pic.twitter.com/k4OnjkNqXg</a>
+    </p>
+    &mdash; Knead (@knead_ink)
+    <a href="https://twitter.com/knead_ink/status/1956099755177832863?ref_src=twsrc%5Etfw">August 14, 2025</a>
+  </blockquote>
+  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  <noscript>
+    <a class="underline" href="https://twitter.com/knead_ink/status/1956099755177832863">Open tweet</a>
+  </noscript>
+</div>
 
       <!-- Right: Stats + Links -->
       <div class="space-y-4">
