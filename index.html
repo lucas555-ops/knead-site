@@ -1,3 +1,5 @@
+<!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -66,20 +68,23 @@
       background-size: 200% 100%;
       animation: gradient-x 3s linear infinite;
     }
-      blockquote.twitter-tweet {max-width: 100% !important; margin: 0 auto !important;}
-  .twitter-tweet-rendered {width: 100% !important;}
-  .tweet-wrap {min-height: 420px;}
-</style>
+
+    /* Tweet embed: responsive & mobile-safe */
+    blockquote.twitter-tweet {max-width:100% !important; margin:0 auto !important;}
+    .twitter-tweet-rendered {width:100% !important;}
+    .tweet-wrap {min-height:420px; overflow:hidden;}
+    @media (max-width:480px){ .tweet-wrap{min-height:360px;} }
+  </style>
 </head>
 
 <body class="grain bg-zinc-950 text-zinc-100 antialiased selection:bg-loaf.neon selection:text-zinc-900">
   <!-- NAV -->
   <header class="sticky top-0 z-30 backdrop-blur supports-[backdrop-filter]:bg-zinc-950/60 border-b border-white/10">
     <div class="max-w-7xl mx-auto px-4 py-3 flex items-center gap-4">
-<a href="#" class="flex items-center gap-3">
-  <img src="assets/logo.png" alt="$KNEAD logo" class="w-9 h-9 rounded-xl">
-  <span class="font-semibold tracking-wide">$KNEAD</span>
-</a>
+      <a href="#" class="flex items-center gap-3">
+        <img src="assets/logo.png" alt="$KNEAD logo" class="w-9 h-9 rounded-xl">
+        <span class="font-semibold tracking-wide">$KNEAD</span>
+      </a>
       <nav class="ml-auto hidden md:flex items-center gap-6 text-sm">
         <a href="#about" class="opacity-80 hover:opacity-100">About</a>
         <a href="#tokenomics" class="opacity-80 hover:opacity-100">Tokenomics</a>
@@ -88,7 +93,7 @@
       </nav>
       <div class="ml-3 flex items-center gap-2">
         <!-- Dexscreener (Solana gradient, softer) -->
-       <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk"
+        <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk"
            target="_blank" rel="noopener"
            class="px-5 py-2 rounded-2xl bg-gradient-to-r from-[#00ff9d] via-[#00e0ff] to-[#9d00ff] text-white font-medium hover:scale-[1.04] hover:shadow-[0_0_20px_rgba(3,225,255,0.6)] transition">
           Dexscreener
@@ -147,68 +152,70 @@
     </div>
   </section>
 
-<!-- TICKER / WIDGETS -->
-<section id="chart" class="py-12 md:py-16 border-t border-white/10">
-  <div class="max-w-7xl mx-auto px-4">
-    <div class="grid md:grid-cols-3 gap-6">
-      <!-- Left: Tweet embed -->
-      <div class="md:col-span-2">
-<div class="rounded-2xl ring-1 ring-white/10 bg-zinc-900/50 p-4 tweet-wrap">
-  <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
-    <p lang="en" dir="ltr">
-      🚀 KNEAD CULT is live.<br>
-      🐾 Meme is weapon. Mask is signal.<br>
-      🔥 Solana Meme Legion - where degenerates ascend.<br>
-      💬 Join the temple →
-      <a href="https://t.co/72uxUOiT5y">https://t.co/72uxUOiT5y</a>
-      <a href="https://twitter.com/search?q=%24KNEAD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$KNEAD</a> |
-      <a href="https://twitter.com/hashtag/Solana?src=hash&amp;ref_src=twsrc%5Etfw">#Solana</a>
-      <a href="https://twitter.com/hashtag/CryptoCult?src=hash&amp;ref_src=twsrc%5Etfw">#CryptoCult</a>
-      <a href="https://twitter.com/hashtag/WAGMI?src=hash&amp;ref_src=twsrc%5Etfw">#WAGMI</a>
-      <a href="https://t.co/k4OnjkNqXg">pic.twitter.com/k4OnjkNqXg</a>
-    </p>
-    &mdash; Knead (@knead_ink)
-    <a href="https://twitter.com/knead_ink/status/1956099755177832863?ref_src=twsrc%5Etfw">August 14, 2025</a>
-  </blockquote>
-  <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-  <noscript>
-    <a class="underline" href="https://twitter.com/knead_ink/status/1956099755177832863">Open tweet</a>
-  </noscript>
-</div>
+  <!-- TICKER / WIDGETS -->
+  <section id="chart" class="py-12 md:py-16 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-6">
 
-      <!-- Right: Stats + Links -->
-      <div class="space-y-4">
-        <!-- Token Stats -->
-        <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-          <h3 class="font-semibold mb-2">Token Stats</h3>
-          <ul class="text-sm text-zinc-300 space-y-1">
-            <li>Chain: <b>Solana</b></li>
-            <li>Supply: <b>1,000,000,000</b></li>
-            <li>Tax: <b>0%</b></li>
-            <li>LP: <b>LOCKED</b></li>
-          </ul>
-        </div>
-
-        <!-- Links -->
-        <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
-          <h3 class="font-semibold mb-2">Links</h3>
-          <div class="flex flex-wrap gap-2 text-sm">
-            <!-- X -->
-            <a href="https://x.com/knead_ink" target="_blank" rel="noopener"
-               class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-              X
-            </a>
-            <!-- Dexscreener -->
-            <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk" target="_blank" rel="noopener"
-               class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
-              Dexscreener
-            </a>
+        <!-- Left: Tweet embed -->
+        <div class="md:col-span-2">
+          <div class="rounded-2xl ring-1 ring-white/10 bg-zinc-900/50 p-4 tweet-wrap">
+            <blockquote class="twitter-tweet" data-theme="dark" data-dnt="true" data-width="100%">
+              <p lang="en" dir="ltr">
+                🚀 KNEAD CULT is live.<br>
+                🐾 Meme is weapon. Mask is signal.<br>
+                🔥 Solana Meme Legion - where degenerates ascend.<br>
+                💬 Join the temple →
+                <a href="https://t.co/72uxUOiT5y">https://t.co/72uxUOiT5y</a>
+                <a href="https://twitter.com/search?q=%24KNEAD&amp;src=ctag&amp;ref_src=twsrc%5Etfw">$KNEAD</a> |
+                <a href="https://twitter.com/hashtag/Solana?src=hash&amp;ref_src=twsrc%5Etfw">#Solana</a>
+                <a href="https://twitter.com/hashtag/CryptoCult?src=hash&amp;ref_src=twsrc%5Etfw">#CryptoCult</a>
+                <a href="https://twitter.com/hashtag/WAGMI?src=hash&amp;ref_src=twsrc%5Etfw">#WAGMI</a>
+                <a href="https://t.co/k4OnjkNqXg">pic.twitter.com/k4OnjkNqXg</a>
+              </p>
+              &mdash; Knead (@knead_ink)
+              <a href="https://twitter.com/knead_ink/status/1956099755177832863?ref_src=twsrc%5Etfw">August 14, 2025</a>
+            </blockquote>
+            <noscript>
+              <a class="underline" href="https://twitter.com/knead_ink/status/1956099755177832863">Open tweet</a>
+            </noscript>
           </div>
         </div>
-      </div>
-    </div> <!-- /grid -->
-  </div> <!-- /container -->
-</section> <!-- /#chart -->
+
+        <!-- Right: Stats + Links -->
+        <div class="space-y-4">
+          <!-- Token Stats -->
+          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+            <h3 class="font-semibold mb-2">Token Stats</h3>
+            <ul class="text-sm text-zinc-300 space-y-1">
+              <li>Chain: <b>Solana</b></li>
+              <li>Supply: <b>1,000,000,000</b></li>
+              <li>Tax: <b>0%</b></li>
+              <li>LP: <b>LOCKED</b></li>
+            </ul>
+          </div>
+
+          <!-- Links -->
+          <div class="p-5 rounded-2xl bg-zinc-900/60 ring-1 ring-white/10">
+            <h3 class="font-semibold mb-2">Links</h3>
+            <div class="flex flex-wrap gap-2 text-sm">
+              <!-- X -->
+              <a href="https://x.com/knead_ink" target="_blank" rel="noopener"
+                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+                X
+              </a>
+              <!-- Dexscreener -->
+              <a href="https://dexscreener.com/solana/EvoLYbnLogXekffYFpaGKP3ZwvdKk6aFAvqodNfBbonk" target="_blank" rel="noopener"
+                 class="px-3 py-2 rounded-xl bg-gradient-to-r from-[#00ff9d] to-[#00cc66] text-black font-semibold hover:shadow-[0_0_12px_rgba(0,255,157,0.6)] transition">
+                Dexscreener
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- /grid -->
+    </div> <!-- /container -->
+  </section> <!-- /#chart -->
 
   <!-- ABOUT -->
   <section id="about" class="py-16 md:py-20">
@@ -238,21 +245,15 @@
   <section id="tokenomics" class="py-16 border-t border-white/10 bg-zinc-900/40">
     <div class="max-w-6xl mx-auto px-4">
       <h2 class="text-3xl md:text-4xl font-bold">Tokenomics</h2>
-
       <div class="mt-8 grid md:grid-cols-3 gap-6">
-        <!-- Supply -->
         <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
           <h3 class="font-semibold mb-2">Supply</h3>
           <p class="text-zinc-300">1,000,000,000 <span class="opacity-70">(editable)</span></p>
         </div>
-
-        <!-- Buy & Hold / or Trade -->
         <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
           <h3 class="font-semibold mb-2">Buy &amp; Hold</h3>
           <p class="text-zinc-300">or <span class="font-semibold">Trade</span></p>
         </div>
-
-        <!-- Ride the Wave / or Get Wrecked -->
         <div class="p-6 rounded-2xl bg-zinc-900 ring-1 ring-white/10">
           <h3 class="font-semibold mb-2">Ride the Wave</h3>
           <p class="text-zinc-300">or <span class="font-semibold">Get Wrecked</span></p>
@@ -341,6 +342,7 @@
     document.getElementById('year').textContent = new Date().getFullYear();
     gsap.to('.animate-pulse', { repeat: -1, yoyo: true, duration: 1.2, opacity: 0.3 });
   </script>
+  <!-- Single embed script for X widgets -->
   <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </body>
 </html>
